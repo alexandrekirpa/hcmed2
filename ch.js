@@ -1,4 +1,4 @@
-a=document.body.innerHTML;
+(function(){a=document.body.innerHTML;
 
 d=a.match(/<td>(Leucócitos)<\/td><td>&nbsp;<\/td><td><b>.*(?=\s.*<\/b>)/igm);o=document.createElement('div');o.setAttribute('style','display:none');
 o.innerHTML=d;o.innerHTML=o.innerText.replace(/<(?:.|\n)*?>/gm, '').replace(/Leucócitos/gm,'Leuco')+' (';
@@ -9,4 +9,4 @@ document.body.appendChild(o);
 if(document.body.innerHTML.match(/HEMOGRAMA/g).length==1){j=' / '+o.innerHTML+')'}else{if(document.body.innerHTML.match(/HEMOGRAMA/g).length>1){j=' / ATENÇÃO: SELECIONE SOMENTE UM HEMOGRAMA POR VEZ';}else{j=''}};
 b=a.match(/<td>(CREATININA|TROPONINA T|CREATINO FOSFOQUINASE|VANCOMICINA|DOSAGEM DO DÍMERO\-D QUANTITATIVO|FIBRINOGÊNIO|PLAQUETAS|pH|ctHCO3|pCO2|Hemoglobina|BE|Hematócrito|FÓSFORO|MAGNÉSIO|CLORO|SÓDIO|POTÁSSIO|URÉIA|PROTEÍNA C REATIVA \(PCR\)|INR =|R =|AMILASE|LIPASE|BILIRRUBINA TOTAL|BILIRRUBINA DIRETA|BILIRRUBINA INDIRETA|ALANINA AMINOTRANSFERASE|ASPARTATO AMINO TRANSFERASE|ALBUMINA|LACTATO|GLICOSE|CLORO|CÁLCIO TOTAL|CÁLCIO IÔNICO)<\/td><td>&nbsp;<\/td><td><b>.*(?=\s.*<\/b>)/igm);
 v=document.createElement('div'); v.setAttribute('title','Desenvolvido por Alexandre Kirchner R1CG - Para críticas ou sugestões, principalmente de exames a serem incluídos mande email para alexandrekirpa@gmail.com'); v.innerHTML=b;v.innerHTML=v.innerText.replace(/<(?:.|\n)*?>/gm, '').replace(/ ,/gm,' / ').replace(/CREATININA/gm,'Cr').replace(/CREATINO FOSFOQUINASE/gm,'CPK').replace(/POTÁSSIO/gm,'K').replace(/SÓDIO/gm,'Na').replace(/MAGNÉSIO/gm,'Mg').replace(/FÓSFORO/gm,'P').replace(/ctHCO3/gm,'BIC').replace(/CLORO/gm,'Cl').replace(/LACTATO/gm,'Lact').replace(/URÉIA/gm,'Ur').replace(/GLICOSE/gm,'Gli').replace(/PLAQUETAS/gm,'PLQ').replace(/HEMATÓCRITO/gm,'Ht').replace(/HEMOGLOBINA/gm,'Hb').replace(/Leucócitos/gm,'Leuco').replace(/BILIRRUBINA DIRETA/gm,'BD').replace(/BILIRRUBINA INDIRETA/gm,'BI').replace(/BILIRRUBINA TOTAL/gm,'BT').replace(/PROTEÍNA C REATIVA \(PCR\)/gm,'PCR').replace(/CÁLCIO IÔNICO/gm,'Ca iônico').replace(/Hematócrito/gm,'Ht').replace(/Hemoglobina/gm,'Hb').replace(/ASPARTATO AMINO TRANSFERASE/gm,'TGO').replace(/ALANINA AMINOTRANSFERASE/gm,'TGO').replace(/ALANINA AMINO TRANSFERASE/gm,'TGP').replace(/INR/gm,'I.N.R.').replace(/R =/gm,'Rel. TTPA')+j+'<BR>';
-document.body.appendChild(v);void(0) 
+document.body.appendChild(v);})()
