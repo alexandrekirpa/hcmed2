@@ -14,7 +14,7 @@ for(i2=0;i2<a2.length;i2++){
 e2=a2[i2].split('&nbsp;');
 
 if(e2[0] != 'Leuco'){
-a3[e2[0].replace('\n','').replace('I.N.R','INR')]=e2[1];
+a3[e2[0].replace('\n','').replace('I.N.R. =','INR').replace('Rel.TTPA','TTPa')]=e2[1];
 }else{
 a3[e2[0].replace('\n','')]=e2[1].split(' (')[0];
 }
@@ -29,12 +29,12 @@ if('Na' in a3){}else{a3['Na']=' - ';}
 if('PCR' in a3){}else{a3['PCR']=' - ';}
 if('K' in a3){}else{a3['K']=' - ';}
 if('INR' in a3){}else{a3['INR']=' - ';}
-if('Rel TTPA' in a3){}else{a3['Rel TTPA']=' - ';}
+if('TTPa' in a3){}else{a3['TTPa']=' - ';}
 if('Ur' in a3){}else{a3['Ur']=' - ';}
 
 a4=document.getElementById('c');
 a4.innerHTML=
 '<table border="1"><tr><td>CPK</td><td>Cr</td><td>Hb</td><td>Leuco</td><td>PLQ</td><td>K</td><td>Na</td><td>PCR</td><td>INR</td><td>Rel TTPA</td><td>Ur</td></tr><tr>'+
-'<td>'+a3['CPK']+'</td><td>'+a3['Cr']+'</td><td>'+a3['Hb']+'</td><td>'+a3['Leuco']+'</td><td>'+a3['PLQ']+'</td><td>'+a3['K']+'</td><td>'+a3['Na']+'</td><td>'+a3['PCR']+'</td><td>'+a3['INR']+'</td><td>'+a3['Rel TTPA']+'</td><td>'+a3['Ur']+'</td></tr></table>'; 
+'<td>'+a3['CPK']+'</td><td>'+a3['Cr']+'</td><td>'+a3['Hb']+'</td><td>'+a3['Leuco']+'</td><td>'+a3['PLQ']+'</td><td>'+a3['K']+'</td><td>'+a3['Na']+'</td><td>'+a3['PCR']+'</td><td>'+a3['INR']+'</td><td>'+a3['TTPa']+'</td><td>'+a3['Ur']+'</td></tr></table>'; 
 
 
