@@ -14,7 +14,7 @@ for(i2=0;i2<a2.length;i2++){
 e2=a2[i2].split('&nbsp;');
 
 if(e2[0] != 'Leuco'){
-a3[e2[0].replace('\n','').replace(/\./gi,'')]=e2[1];
+a3[e2[0].replace('\n','').replace('I.N.R.','')]=e2[1];
 }else{
 a3[e2[0].replace('\n','')]=e2[1].split(' (')[0];
 }
