@@ -2,7 +2,7 @@ a=document.body.innerHTML;  d=a.match(/<td>(Leucócitos)<\/td><td>&nbsp;<\/td><t
 
 rrrrt=document.createElement('input');
 rrrrt.setAttribute('value','Mostrar Template Vascular').setAttribute('style','display:block');
-rrrrt.setAttribute('onclick','javascript:document.getElementById(\'c\').setAttribute(\'style\',\'display:block\');window.scrollTo(0,document.body.scrollHeight);');
+rrrrt.setAttribute('onclick','javascript:document.getElementById(\'c\').setAttribute(\'style\',\'display:block\');');
 document.body.appendChild(rrrrt);
 rrr=document.createElement('div');
 rrr.setAttribute('id','c');
@@ -41,7 +41,7 @@ a4.innerHTML=
 
 rrrrt2=document.createElement('input');
 rrrrt2.setAttribute('value','Mostrar Template URO').setAttribute('style','display:block');
-rrrrt2.setAttribute('onclick','javascript:document.getElementById(\'c2\').setAttribute(\'style\',\'display:block\');window.scrollTo(0,document.body.scrollHeight);');
+rrrrt2.setAttribute('onclick','javascript:document.getElementById(\'c2\').setAttribute(\'style\',\'display:block\');');
 document.body.appendChild(rrrrt2);
 rrr2=document.createElement('div');
 rrr2.setAttribute('id','c2');
