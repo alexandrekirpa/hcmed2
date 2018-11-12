@@ -99,6 +99,6 @@ a42.innerHTML=
 
 window.scrollTo(0,document.body.scrollHeight);
 
-dde=document.creaeteElemente;
+dde=document.createElement;
 dde.innerHTML='<script>  $( function() {    $( \"#c2\" ).dialog();  } );  </script>';
 document.body.appendChild(dde);
