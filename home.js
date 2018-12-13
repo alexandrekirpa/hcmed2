@@ -10392,7 +10392,7 @@ v=document.createElement('div');
 v.setAttribute('id','a');
 v.setAttribute('title','HCMEDTAB v2.1'); 
 v.innerHTML=b;
-v.innerHTML=v.innerText.replace(/<(?:.|\n)*?>/gm, '').replace(/ ,/gm,' / ').replace(/CREATININA/gm,'Cr').replace(/CREATINO FOSFOQUINASE/gm,'CPK').replace(/POTÁSSIO/gm,'K').replace(/SÓDIO/gm,'Na').replace(/MAGNÉSIO/gm,'Mg').replace(/FÓSFORO/gm,'P').replace(/ctHCO3/gm,'BIC').replace(/CLORO/gm,'Cl').replace(/LACTATO/gm,'Lact').replace(/URÉIA/gm,'Ur').replace(/GLICOSE/gm,'Gli').replace(/PLAQUETAS/gm,'PLQ').replace(/HEMATÓCRITO/gm,'Ht').replace(/HEMOGLOBINA/gm,'Hb').replace(/Leucócitos/gm,'Leuco').replace(/BILIRRUBINA DIRETA/gm,'BD').replace(/BILIRRUBINA INDIRETA/gm,'BI').replace(/BILIRRUBINA TOTAL/gm,'BT').replace(/PROTEÍNA C REATIVA \(PCR\)/gm,'PCR').replace(/CÁLCIO IÔNICO/gm,'Ca iônico').replace(/Hematócrito/gm,'Ht').replace(/Hemoglobina/gm,'Hb').replace(/ASPARTATO AMINO TRANSFERASE/gm,'TGO').replace(/ALANINA AMINOTRANSFERASE/gm,'TGO').replace(/ALANINA AMINO TRANSFERASE/gm,'TGP').replace(/INR/gm,'I.N.R.').replace(/R =/gm,'Rel. TTPA')+j+'<BR><br><br><input type=\'button\' onclick=\'$( function() {$(\"#buttonholder\").toggle()} );\' value=\'Mais...\'><div id=\"buttonholder\"><input type=\'button\' onclick=\'$( function() {$( \"#c\" ).dialog({ width: 500 });  } );\' value=\'Template Vascular\'><br><input type=\'button\' onclick=\'$( function() {$( \"#c2\" ).dialog({ width: 500 });  } );\' value=\'Template Urologia\'></div>';
+v.innerHTML=v.innerText.replace(/<(?:.|\n)*?>/gm, '').replace(/ ,/gm,' / ').replace(/CREATININA/gm,'Cr').replace(/CREATINO FOSFOQUINASE/gm,'CPK').replace(/POTÁSSIO/gm,'K').replace(/SÓDIO/gm,'Na').replace(/MAGNÉSIO/gm,'Mg').replace(/FÓSFORO/gm,'P').replace(/ctHCO3/gm,'BIC').replace(/CLORO/gm,'Cl').replace(/LACTATO/gm,'Lact').replace(/URÉIA/gm,'Ur').replace(/GLICOSE/gm,'Gli').replace(/PLAQUETAS/gm,'PLQ').replace(/HEMATÓCRITO/gm,'Ht').replace(/HEMOGLOBINA/gm,'Hb').replace(/Leucócitos/gm,'Leuco').replace(/BILIRRUBINA DIRETA/gm,'BD').replace(/BILIRRUBINA INDIRETA/gm,'BI').replace(/BILIRRUBINA TOTAL/gm,'BT').replace(/PROTEÍNA C REATIVA \(PCR\)/gm,'PCR').replace(/CÁLCIO IÔNICO/gm,'Ca iônico').replace(/Hematócrito/gm,'Ht').replace(/Hemoglobina/gm,'Hb').replace(/ASPARTATO AMINO TRANSFERASE/gm,'TGO').replace(/ALANINA AMINOTRANSFERASE/gm,'TGO').replace(/ALANINA AMINO TRANSFERASE/gm,'TGP').replace(/INR/gm,'I.N.R.').replace(/R =/gm,'Rel. TTPA')+j+'<BR><br><br><input type=\'button\' onclick=\'$( function() {$(\"#buttonholder\").toggle()} );\' value=\'Mais...\' style=\'display:none\'><div id=\"buttonholder\"><input type=\'button\' onclick=\'$( function() {$( \"#c\" ).dialog({ width: 500 });  } );\' value=\'Template Vascular\' style=\'width:50px\'><br><input type=\'button\' onclick=\'$( function() {$( \"#c2\" ).dialog({ width: 500 });  } );\' value=\'Template Urologia\' style=\'width:50px\'><input type=\'button\' style=\'width:50px\' onclick=\'$( function() {$( \"#c2\" ).dialog({ width: 500 });  } );\' value=\'Sobre\'></div>';
 document.body.appendChild(v);
 
 
@@ -10426,7 +10426,7 @@ if('Ur' in a3){}else{a3['Ur']=' - ';}
 
 a4=document.getElementById('c');
 a4.innerHTML=
-'<table border="1"><tr><td>CPK</td><td>Cr</td><td>Hb</td><td>Leuco</td><td>PLQ</td><td>K</td><td>Na</td><td>PCR</td><td>INR</td><td>Rel TTPA</td><td>Ur</td></tr><tr>'+
+'<br><br><table border="1"><tr><td>CPK</td><td>Cr</td><td>Hb</td><td>Leuco</td><td>PLQ</td><td>K</td><td>Na</td><td>PCR</td><td>INR</td><td>Rel TTPA</td><td>Ur</td></tr><tr>'+
 '<td>'+a3['CPK']+'</td><td>'+a3['Cr']+'</td><td>'+a3['Hb']+'</td><td>'+a3['Leuco']+'</td><td>'+a3['PLQ']+'</td><td>'+a3['K']+'</td><td>'+a3['Na']+'</td><td>'+a3['PCR']+'</td><td>'+a3['INR']+'</td><td>'+a3['TTPa']+'</td><td>'+a3['Ur']+'</td></tr></table>'; 
 
 
@@ -10485,6 +10485,13 @@ a42.innerHTML=
 
 /*fim uro*/
 
+
+
+rrr211=document.createElement('div');
+rrr211.setAttribute('id','c33');
+rrr211.setAttribute('style','display:none');
+rrr211.innerHTML='Criado por Alexandre Kirchner - R1CG. <br>Sugestões para: <a href=\"mailto:alexandrekirpa@gmail.com\">alexandrekirpa@gmail.com</a>.';
+document.body.appendChild(rrr211);
 
   $( function() {
     $( "#a" ).dialog();
