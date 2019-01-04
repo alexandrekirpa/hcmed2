@@ -10387,13 +10387,16 @@ o.setAttribute('style','display:none');
 o.innerHTML=d;
 o.innerHTML=o.innerText.replace(/<(?:.|\n)*?>/gm, '').replace(/Leucócitos/gm,'Leuco')+' ('; x=a.match(/<td>(Eosinófilos|Neutrófilos|Basófilos|Linfócitos|Monócitos|Bastonetes|Segmentados|Mielócitos|Metamielócitos)<\/td><td>.*(?=\s.*)/igm); w=document.createElement('div');w.setAttribute('style','display:none');w.innerHTML=x;o.innerHTML=o.innerHTML+w.innerText.replace(/<(?:.|\n)*?>/gm, '').replace(/Bastonetes/gm,'</hhh> - Bastão ').replace(/³,/gm, '</hhh> - ').replace(/%/gm, '% <hhh>').replace(/<hhh>(?:.|\n)*?<\/hhh>/gm, '').replace(/ófilos/gm,'o ').replace(/ócitos/gm,'o ').replace(/Segmentados/gm,'Segment ').replace(/<hhh>.*³/gm, '');
 document.body.appendChild(o);
-if(document.body.innerHTML.match(/HEMOGRAMA/g)){if(document.body.innerHTML.match(/HEMOGRAMA/g).length==1){j=' / '+o.innerHTML+')'}else{if(document.body.innerHTML.match(/HEMOGRAMA/g).length>1){j=' / ATENÇÃO: SELECIONE SOMENTE UM HEMOGRAMA POR VEZ';}else{j=''}}}else{j=''}; b=a.match(/<td>(CREATININA|TROPONINA T|CREATINO FOSFOQUINASE|VANCOMICINA|DOSAGEM DO DÍMERO\-D QUANTITATIVO|FIBRINOGÊNIO|PLAQUETAS|pH|ctHCO3|pCO2|Hemoglobina|BE|Hematócrito|FÓSFORO|MAGNÉSIO|CLORO|SÓDIO|POTÁSSIO|URÉIA|PROTEÍNA C REATIVA \(PCR\)|INR =|R =|AMILASE|LIPASE|BILIRRUBINA TOTAL|BILIRRUBINA DIRETA|BILIRRUBINA INDIRETA|ALANINA AMINOTRANSFERASE|ASPARTATO AMINO TRANSFERASE|ALBUMINA|LACTATO|GLICOSE|CLORO|CÁLCIO TOTAL|CÁLCIO IÔNICO)<\/td><td>&nbsp;<\/td><td><b>.*(?=\s.*<\/b>)/igm);
+if(document.body.innerHTML.match(/HEMOGRAMA/g)){if(document.body.innerHTML.match(/HEMOGRAMA/g).length==1){j=' / '+o.innerHTML+')'}else{if(document.body.innerHTML.match(/HEMOGRAMA/g).length>1){j=' / ATENÇÃO: SELECIONE SOMENTE UM HEMOGRAMA POR VEZ';}else{j=''}}}else{j=''}; b=a.match(/<td>(CREATININA|FOSFATASE ALCALINA|GAMA GLUTAMIL TRANSFERASE|TROPONINA T|CREATINO FOSFOQUINASE|VANCOMICINA|DOSAGEM DO DÍMERO\-D QUANTITATIVO|FIBRINOGÊNIO|PLAQUETAS|pH|ctHCO3|pCO2|Hemoglobina|BE|Hematócrito|FÓSFORO|MAGNÉSIO|CLORO|SÓDIO|POTÁSSIO|URÉIA|PROTEÍNA C REATIVA \(PCR\)|INR =|R =|AMILASE|LIPASE|BILIRRUBINA TOTAL|BILIRRUBINA DIRETA|BILIRRUBINA INDIRETA|ALANINA AMINOTRANSFERASE|ASPARTATO AMINO TRANSFERASE|ALBUMINA|LACTATO|GLICOSE|CLORO|CÁLCIO TOTAL|CÁLCIO IÔNICO)<\/td><td>&nbsp;<\/td><td><b>.*(?=\s.*<\/b>)/igm);
 v=document.createElement('div');
 v.setAttribute('id','a');
 v.setAttribute('style','display:none');
 v.setAttribute('title','HCMEDTAB v2.1'); 
 v.innerHTML=b;
-v.innerHTML=v.innerText.replace(/<(?:.|\n)*?>/gm, '').replace(/ ,/gm,' / ').replace(/CREATININA/gm,'Cr').replace(/CREATINO FOSFOQUINASE/gm,'CPK').replace(/POTÁSSIO/gm,'K').replace(/SÓDIO/gm,'Na').replace(/MAGNÉSIO/gm,'Mg').replace(/FÓSFORO/gm,'P').replace(/ctHCO3/gm,'BIC').replace(/CLORO/gm,'Cl').replace(/LACTATO/gm,'Lact').replace(/URÉIA/gm,'Ur').replace(/GLICOSE/gm,'Gli').replace(/PLAQUETAS/gm,'PLQ').replace(/HEMATÓCRITO/gm,'Ht').replace(/HEMOGLOBINA/gm,'Hb').replace(/Leucócitos/gm,'Leuco').replace(/BILIRRUBINA DIRETA/gm,'BD').replace(/BILIRRUBINA INDIRETA/gm,'BI').replace(/BILIRRUBINA TOTAL/gm,'BT').replace(/PROTEÍNA C REATIVA \(PCR\)/gm,'PCR').replace(/CÁLCIO IÔNICO/gm,'Ca iônico').replace(/Hematócrito/gm,'Ht').replace(/Hemoglobina/gm,'Hb').replace(/ASPARTATO AMINO TRANSFERASE/gm,'TGO').replace(/ALANINA AMINOTRANSFERASE/gm,'TGO').replace(/ALANINA AMINO TRANSFERASE/gm,'TGP').replace(/INR/gm,'I.N.R.').replace(/R =/gm,'Rel. TTPA')+j+'<BR><br><br><input type=\'button\' onclick=\'$( function() {$(\"#buttonholder\").toggle()} );\' value=\'Mais...\' style=\'width:200px\'><br><br><div style=\'display:none\' id=\"buttonholder\"><input type=\'button\' onclick=\'$( function() {$( \"#c\" ).dialog({ width: 500 });  } );\' value=\'Template Vascular\' style=\'width:200px\'><br><input type=\'button\' onclick=\'$( function() {$( \"#c2\" ).dialog({ width: 500 });  } );\' value=\'Template Urologia\' style=\'width:200px\'><br><input type=\'button\' style=\'width:200px\' onclick=\'$( function() {$( \"#c33\" ).dialog({ width: 500 });  } );\' value=\'Sobre\'></div>';
+v.innerHTML=v.innerText.replace(/<(?:.|\n)*?>/gm, '').replace(/ ,/gm,' / ').replace(/CREATININA/gm,'Cr').replace(/GAMA GLUTAMIL TRANSFERASE/gm,'GGT').replace(/FOSFATASE ALCALINA/gm,'FA').replace(/CREATINO FOSFOQUINASE/gm,'CPK').replace(/POTÁSSIO/gm,'K').replace(/SÓDIO/gm,'Na').replace(/MAGNÉSIO/gm,'Mg').replace(/FÓSFORO/gm,'P').replace(/ctHCO3/gm,'BIC').replace(/CLORO/gm,'Cl').replace(/LACTATO/gm,'Lact').replace(/URÉIA/gm,'Ur').replace(/GLICOSE/gm,'Gli').replace(/PLAQUETAS/gm,'PLQ').replace(/HEMATÓCRITO/gm,'Ht').replace(/HEMOGLOBINA/gm,'Hb').replace(/Leucócitos/gm,'Leuco').replace(/BILIRRUBINA DIRETA/gm,'BD').replace(/BILIRRUBINA INDIRETA/gm,'BI').replace(/BILIRRUBINA TOTAL/gm,'BT').replace(/PROTEÍNA C REATIVA \(PCR\)/gm,'PCR').replace(/CÁLCIO IÔNICO/gm,'Ca iônico').replace(/Hematócrito/gm,'Ht').replace(/Hemoglobina/gm,'Hb').replace(/ASPARTATO AMINO TRANSFERASE/gm,'TGP').replace(/ALANINA AMINOTRANSFERASE/gm,'TGO').replace(/ALANINA AMINO TRANSFERASE/gm,'TGP').replace(/INR/gm,'I.N.R.').replace(/R =/gm,'Rel. TTPA')+j+'<BR><br><br><input type=\'button\' onclick=\'$( function() {$(\"#buttonholder\").toggle()} );\' value=\'Mais...\' style=\'width:200px\'><br><br><div style=\'display:none\' id=\"buttonholder\"><input type=\'button\' onclick=\'$( function() {$( \"#c\" ).dialog({ width: 500 });  } );\' value=\'Template Vascular\' style=\'width:200px\'>'+
+ '<br><input type=\'button\' onclick=\'$( function() {$( \"#c2\" ).dialog({ width: 500 });  } );\' value=\'Template Urologia\' style=\'width:200px\'>'+
+ '<br><input type=\'button\' onclick=\'$( function() {$( \"#c211\" ).dialog({ width: 500 });  } );\' value=\'Template Geral\' style=\'width:200px\'>'+
+ '<br><input type=\'button\' style=\'width:200px\' onclick=\'$( function() {$( \"#c33\" ).dialog({ width: 500 });  } );\' value=\'Sobre\'></div>';
 document.body.appendChild(v);
 
 
@@ -10486,6 +10489,24 @@ a42.innerHTML=
 
 /*fim uro*/
 
+
+rrr211=document.createElement('div');
+rrr211.setAttribute('id','c211');
+rrr211.setAttribute('style','display:none');
+document.body.appendChild(rrr211);
+
+
+a4211=document.getElementById('c211');
+a4211.innerHTML=
+'<br><br><table border="1"><tr><td>Cr</td><td>Hb</td><td>Leuco</td><td>PLQ</td><td>K</td><td>Na</td><td>Ur</td></tr><tr>'+
+'<td>'+a32['Cr']+
+'</td><td>'+a32['Hb']+
+'</td><td>'+a32['Leuco']+
+'</td><td>'+a32['PLQ']+
+'</td><td>'+a32['K']+
+'</td><td>'+a32['Na']+
+'</td><td>'+a32['Ur']+
+'</td></tr></table>'; 
 
 
 rrr211=document.createElement('div');
