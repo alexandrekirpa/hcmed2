@@ -10512,4 +10512,9 @@ a4211.innerHTML=
 rrr211=document.createElement('div');
 rrr211.setAttribute('id','c33');
 rrr211.setAttribute('style','display:none');
-rrr211.innerHTML='Criado por Alexandre Kirchner - R1CG. <br>Sugestões para: <a href=\"mailto:alexa
+rrr211.innerHTML='Criado por Alexandre Kirchner - R1CG. <br>Sugestões para: <a href=\"mailto:alexandrekirpa@gmail.com\">alexandrekirpa@gmail.com</a>.';
+document.body.appendChild(rrr211);
+
+  $( function() {
+    $( "#a" ).dialog();
+  } );
