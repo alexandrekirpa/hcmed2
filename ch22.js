@@ -10497,7 +10497,7 @@ document.body.appendChild(rrr211);
 
 a4211=document.getElementById('c211');
 a4211.innerHTML=
-'<br><br><table border="1"><tr><td>Cr</td><td>Hb</td><td>Leuco</td><td>PLQ</td><td>K</td><td>Na</td><td>PCR</td></tr><td>Ur</td></tr><tr>'+
+'<br><br><table border="1"><tr><td>Cr</td><td>Hb</td><td>Leuco</td><td>PLQ</td><td>K</td><td>Na</td><td>PCR</td><td>Ur</td></tr><tr>'+
 '<td>'+a32['Cr']+
 '</td><td>'+a32['Hb']+
 '</td><td>'+a32['Leuco']+
