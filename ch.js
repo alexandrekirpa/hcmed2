@@ -1,5 +1,4 @@
-/*!
- * jQuery JavaScript Library v3.3.1
+/* jQuery JavaScript Library v3.3.1
  * https://jquery.com/
  *
  * Includes Sizzle.js
@@ -10387,7 +10386,7 @@ o.setAttribute('style','display:none');
 o.innerHTML=d;
 o.innerHTML=o.innerText.replace(/<(?:.|\n)*?>/gm, '').replace(/Leucócitos/gm,'Leuco')+' ('; x=a.match(/<td>(Eosinófilos|Neutrófilos|Basófilos|Linfócitos|Monócitos|Bastonetes|Segmentados|Mielócitos|Metamielócitos)<\/td><td>.*(?=\s.*)/igm); w=document.createElement('div');w.setAttribute('style','display:none');w.innerHTML=x;o.innerHTML=o.innerHTML+w.innerText.replace(/<(?:.|\n)*?>/gm, '').replace(/Bastonetes/gm,'</hhh> - Bastão ').replace(/³,/gm, '</hhh> - ').replace(/%/gm, '% <hhh>').replace(/<hhh>(?:.|\n)*?<\/hhh>/gm, '').replace(/ófilos/gm,'o ').replace(/ócitos/gm,'o ').replace(/Segmentados/gm,'Segment ').replace(/<hhh>.*³/gm, '');
 document.body.appendChild(o);
-if(document.body.innerHTML.match(/HEMOGRAMA/g)){if(document.body.innerHTML.match(/HEMOGRAMA/g).length==1){j=' / '+o.innerHTML+')'}else{if(document.body.innerHTML.match(/HEMOGRAMA/g).length>1){j=' / ATENÇÃO: SELECIONE SOMENTE UM HEMOGRAMA POR VEZ';}else{j=''}}}else{j=''}; b=a.match(/<td>(CREATININA|FOSFATASE ALCALINA|GAMA GLUTAMIL TRANSFERASE|TROPONINA T|CREATINO FOSFOQUINASE|VANCOMICINA|DOSAGEM DO DÍMERO\-D QUANTITATIVO|FIBRINOGÊNIO|PLAQUETAS|pH|ctHCO3|pCO2|Hemoglobina|BE|Hematócrito|FÓSFORO|MAGNÉSIO|CLORO|SÓDIO|POTÁSSIO|URÉIA|PROTEÍNA C REATIVA \(PCR\)|INR =|R =|AMILASE|LIPASE|BILIRRUBINA TOTAL|BILIRRUBINA DIRETA|BILIRRUBINA INDIRETA|ALANINA AMINOTRANSFERASE|ASPARTATO AMINO TRANSFERASE|ALBUMINA|LACTATO|GLICOSE|CLORO|CÁLCIO TOTAL|CÁLCIO IÔNICO)<\/td><td>&nbsp;<\/td><td><b>.*(?=\s.*<\/b>)/igm);
+if(document.body.innerHTML.match(/HEMOGRAMA/g)){if(document.body.innerHTML.match(/HEMOGRAMA/g).length==1){j=' / '+o.innerHTML+')'}else{if(document.body.innerHTML.match(/HEMOGRAMA/g).length>1){j=' / ATENÇÃO: SELECIONE SOMENTE UM HEMOGRAMA POR VEZ';}else{j=''}}}else{j=''}; b=a.match(/<td>(CREATININA|FOSFATASE ALCALINA|GAMA GLUTAMIL TRANSFERASE|TROPONINA T|CREATINO FOSFOQUINASE|VANCOMICINA|DOSAGEM DO DÍMERO\-D QUANTITATIVO|FIBRINOGÊNIO|PLAQUETAS|pH|ctHCO3|pCO2|Hemoglobina|BE|Hematócrito|FÓSFORO|MAGNÉSIO|CLORO|SÓDIO|POTÁSSIO|URÉIA|PROTEÍNA C REATIVA \(PCR\)|INR =|R =|AMILASE|LIPASE|BILIRRUBINA TOTAL|BILIRRUBINA DIRETA|BILIRRUBINA INDIRETA|ALANINA AMINOTRANSFERASE|ASPARTATO AMINO TRANSFERASE|ALBUMINA|LACTATO|GLICOSE|CLORO|CÁLCIO TOTAL|CÁLCIO IÔNICO|Anti Fator X ativado:|NT\-proBNP|CK\-MB  \-  QUANTITATIVA|VITAMINA B 12|CAPACIDADE TOTAL DE LIGAÇÃO DE FERRO|FERRITINA|SATURAÇÃO DE FERRO|FERRO|COLESTEROL NÃO HDL|TRIGLICÉRIDES|VLDL \- COLESTEROL|HDL \- COLESTEROL|LDL \- COLESTEROL|)<\/td><td>&nbsp;<\/td><td><b>.*(?=\s.*<\/b>)/igm);
 v=document.createElement('div');
 v.setAttribute('id','a');
 v.setAttribute('style','display:none');
@@ -10498,13 +10497,14 @@ document.body.appendChild(rrr211);
 
 a4211=document.getElementById('c211');
 a4211.innerHTML=
-'<br><br><table border="1"><tr><td>Cr</td><td>Hb</td><td>Leuco</td><td>PLQ</td><td>K</td><td>Na</td><td>Ur</td></tr><tr>'+
+'<br><br><table border="1"><tr><td>Cr</td><td>Hb</td><td>Leuco</td><td>PLQ</td><td>K</td><td>Na</td><td>PCR</td><td>Ur</td></tr><tr>'+
 '<td>'+a32['Cr']+
 '</td><td>'+a32['Hb']+
 '</td><td>'+a32['Leuco']+
 '</td><td>'+a32['PLQ']+
 '</td><td>'+a32['K']+
 '</td><td>'+a32['Na']+
+'</td><td>'+a32['PCR']+
 '</td><td>'+a32['Ur']+
 '</td></tr></table>'; 
 
