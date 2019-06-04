@@ -7,5 +7,5 @@ pcr=cont.match(/PROTEINA \- C \- REATIVA \.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\: 78
 ur=cont.match(/<pre>URÉIA\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\: <b>.*?\&nbsp\;mg\/dL<\/b>/).toString().replace('<pre>URÉIA...................: <b>','').replace('&nbsp;mg/dL</b>','');
 cr=cont.match(/<pre>CREATININA\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\: <b>.*?\&nbsp\;mg\/dL<\/b>/).toString().replace('<pre>CREATININA.....................: <b>','').replace('&nbsp;mg/dL</b>','');
 na=cont.match(/<pre>SÓDIO\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\: <b>.*?\&nbsp\;mEq\/L<\/b>/).toString().replace('<pre>SÓDIO..................: <b>','').replace('&nbsp;mEq/L</b>','');
-k=cont.match(/<pre>POTÁSSIO\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\: <b>.*?&nbsp\;mEq\/L<\/b>/).toString().replace('<pre>POTÁSSIO........................: <b>','').replace('&nbsp;mEq/L</b>','');
+k=cont.match(/<pre>POTÁSSIO\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\: <b>.*?\&nbsp\;mEq\/L<\/b>/).toString().replace('<pre>POTÁSSIO........................: <b>','').replace('&nbsp;mEq/L</b>','');
 alert(hb+''+leuco+''+plq+''+pcr+''+ur+''+cr+''+na+''+k);
