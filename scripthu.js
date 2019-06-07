@@ -77,7 +77,7 @@ pco2=cont.match(/PCO2\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\
 if(pco2!=null){pco2=pco2.toString().replace(/PCO2\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.: <b>/gi,'').replace(/&nbsp;mmHg<\/b><br>/gi,'')}else{pco2='nulo'};
 
 be=cont.match(/B\.E\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.: <b>.*?&nbsp;mmol\/L<\/b><br>/);
-if(be!=null){pco2=pco2.toString().replace(/B\.E\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.: <b>/gi,'').replace(/&nbsp;mmol\/L<\/b><br>/gi,'')}else{pco2='nulo'};
+if(be!=null){pco2=pco2.toString().replace(/B\.E\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.: <b>/gi,'').replace(/&nbsp;mmol\/L<\/b><br>/gi,'')}else{be='nulo'};
 
 sato2=cont.match(/SAT\. O2\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.: <b>.*?&nbsp;%<\/b><br>/);
 if(sato2!=null){sato2=sato2.toString().replace(/SAT\. O2\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.: <b>/gi,'').replace(/&nbsp;%<\/b><br>/gi,'')}else{sato2='nulo'};
