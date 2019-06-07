@@ -34,7 +34,7 @@ msg='Exames --->';
 
 for(i=0;i<a.length;i++){
 if(a[i]!='nulo'){
-msg+=b[i]+': '+a[i]+' /';
+msg+=b[i]+': '+a[i]+' / ';
 }
 }
 
