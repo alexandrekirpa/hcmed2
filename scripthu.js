@@ -101,7 +101,6 @@ urina='Leuco (urina): '+urina_leuco+' | Hemacias (urina): '+urina_hemacias+' | N
 
 
 
-
 a=[hb,leuco,plq,pcr,ur,cr,na,k,ddimero,ckmb,troponina,bt,bd,bi,tgo,tgp,ggt,fa,amilase,lipase,ph,po2,hco3,pco2,be,sato2,cai,lactato,urina];
 b=['Hb','Leuco','Plaquetas','PCR','Ur','Cr','Na','K','DDIMERO','CKMB','TROPONINA','BT','BD','BI','TGO','TGP','GGT','FA','AMILASE','LIPASE','pH','pO2','HCO3','pCO2','BE','SatO2','CAi','Lactato','Urina1'];
 msg='Exames --->';
@@ -113,4 +112,4 @@ msg+=b[i]+': '+a[i]+' / ';
 }
 
 
-alert(msg);
+document.body.innerHTML='<br><br> <b>LabsHU 1.0 - por Alexandre Kirchner R2CG (sugestões: alexandrekirpa@gmail.com)<br><br><br>'+document.body.innerHTML;
