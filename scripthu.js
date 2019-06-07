@@ -20,7 +20,7 @@ ur=cont.match(/<pre>URÉIA\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\: <b>.*?&nbsp;m
 if(ur!=null){ur.toString().replace(/<pre>URÉIA\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\: <b>/gi,'').replace(/&nbsp;mg\/dL<\/b>/gi,'')}else{ur='nulo'};
 
 cr=cont.match(/<pre>CREATININA\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\: <b>.*?&nbsp;mg\/dL<\/b>/);
-if(cr!=null){cr.toString().replace(/<pre>CREATININA\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\: <b>/gi,'').replace(/&nbsp;mg\/dL<\/b>/gi','')}else{cr='nulo'};
+if(cr!=null){cr.toString().replace(/<pre>CREATININA\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\: <b>/gi,'').replace(/&nbsp;mg\/dL<\/b>/gi,'')}else{cr='nulo'};
 
 na=cont.match(/<pre>SÓDIO\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\: <b>.*?&nbsp;mEq\/L<\/b>/);
 if(na!=null){na.toString().replace(/<pre>SÓDIO\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\: <b>/gi,'').replace(/&nbsp;mEq\/L<\/b>/gi,'')}else{na='nulo'};
