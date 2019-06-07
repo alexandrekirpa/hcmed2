@@ -82,17 +82,17 @@ if(be!=null){pco2=pco2.toString().replace(/B\.E\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\
 sato2=cont.match(/SAT\. O2\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.: <b>.*?&nbsp;%<\/b><br>/);
 if(sato2!=null){sato2=sato2.toString().replace(/SAT\. O2\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.: <b>/gi,'').replace(/&nbsp;%<\/b><br>/gi,'')}else{sato2='nulo'};
 
-cai=cont.match(/CÁLCIO IONIZADO - SANGUE\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.: <b>.8?&nbsp;mmol\/L<\/b><br>/);
+cai=cont.match(/CÁLCIO IONIZADO - SANGUE\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.: <b>.*?&nbsp;mmol\/L<\/b><br>/);
 if(cai!=null){cai=cai.toString().replace(/CÁLCIO IONIZADO - SANGUE\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.: <b>/gi,'').replace(/&nbsp;mmol\/L<\/b><br>/gi,'')}else{cai='nulo'};
 
 lactato=cont.match(/<pre>LACTATO\.\.\.\.\.\.\.\.\.\.\.\.: <b>.*?&nbsp;mg\/dL<\/b><\/pre>/);
 if(lactato!=null){lactato=lactato.toString().replace(/<pre>LACTATO\.\.\.\.\.\.\.\.\.\.\.\.: <b>/gi,'').replace(/&nbsp;mg\/dL<\/b><\/pre>/gi,'')}else{lactato='nulo'};
 
 var urina;
-urina_leuco=cont.match(/LEUCÓCITOS \.\.\.\.\.\.\.\.: <b>.*?<\/td>/).toString().replace(/<\/td>/gi,'').replace(/LEUCÓCITOS \.\.\.\.\.\.\.\.: <b>/gi,'');
-urina_hemacias=cont.match(/HEMÁCIAS \.\.\.\.\.\.\.\.\.\.: <b>.*?<\/td>/).toString().replace(/<\/td>/gi,'').replace(/HEMÁCIAS \.\.\.\.\.\.\.\.\.\.: <b>/gi,'');
+urina_leuco=cont.match(/LEUCÓCITOS \.\.\.\.\.\.\.\.: <b>.*?<\/b>&nbsp;\/ml<\/td>/).toString().replace(/<\/b>&nbsp;\/ml<\/td>/gi,'').replace(/LEUCÓCITOS \.\.\.\.\.\.\.\.: <b>/gi,'');
+urina_hemacias=cont.match(/HEMÁCIAS \.\.\.\.\.\.\.\.\.\.: <b>.*?<\/b>&nbsp;\/ml<\/td>/).toString().replace(/<\/b>&nbsp;\/ml<\/td>/gi,'').replace(/HEMÁCIAS \.\.\.\.\.\.\.\.\.\.: <b>/gi,'');
 urina_nitrito=cont.match(/NITRITO\.\.\.\.\.\.\.\.\.\.\.\.: <b>.*?<\/b><\/td>/).toString().replace(/<\/b><\/td>/gi,'').replace(/NITRITO\.\.\.\.\.\.\.\.\.\.\.\.: <b>/gi,'');
-urina_sangue=cont.match(/SANGUE OCULTO \.\.\.\.\.: <b>.*?<\/b><\/td>/).toString().replace(/<\/b><\/td>/gi,'').replace(/SANGUE OCULTO \.\.\.\.\.: <b>.*?<\/b><\/td>/gi,'');
+urina_sangue=cont.match(/SANGUE OCULTO \.\.\.\.\.: <b>.*?<\/b><\/td>/).toString().replace(/<\/b><\/td>/gi,'').replace(/SANGUE OCULTO \.\.\.\.\.: <b>/gi,'');
 
 if(urina!=null){
 urina='Leuco (urina): '+urina_leuco+' | Hemacias (urina): '+urina_hemacias+' | Nitrito: '+ urina_nitrito+ ' | Sangue oculto (urina): ' + urina_sangue;
@@ -103,7 +103,7 @@ urina='Leuco (urina): '+urina_leuco+' | Hemacias (urina): '+urina_hemacias+' | N
 
 
 a=[hb,leuco,plq,pcr,ur,cr,na,k,ddimero,ckmb,troponina,bt,bd,bi,tgo,tgp,ggt,fa,amilase,lipase,ph,po2,hco3,pco2,be,sato2,cai,lactato,urina];
-b=['Hb','Leuco','Plaquetas','PCR','Ur','Cr','Na','K','DDIMERO','CKMB','TROPONINA','BT','BD','BI','TGO','TGP','GGT','FA','AMILASE','LIPASE','pH','pO2','BE','SatO2','CAi','Lactato','Urina 1 - '];
+b=['Hb','Leuco','Plaquetas','PCR','Ur','Cr','Na','K','DDIMERO','CKMB','TROPONINA','BT','BD','BI','TGO','TGP','GGT','FA','AMILASE','LIPASE','pH','pO2','HCO3','pCO2','BE','SatO2','CAi','Lactato','Urina1'];
 msg='Exames --->';
 
 for(i=0;i<a.length;i++){
