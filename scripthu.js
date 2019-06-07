@@ -112,4 +112,4 @@ msg+=b[i]+': '+a[i]+' / ';
 }
 
 
-document.body.innerHTML='<br><br> <b>LabsHU 1.0 - por Alexandre Kirchner R2CG (sugestões: alexandrekirpa@gmail.com)<br><br><br>'+document.body.innerHTML;
+document.body.innerHTML='<br><br> <b>LabsHU 1.0 - por Alexandre Kirchner R2CG (sugestões: alexandrekirpa@gmail.com)<br><br>'+msg+ '<br>'+document.body.innerHTML;
