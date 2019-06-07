@@ -4,8 +4,8 @@ javascript:
 
 cont=document.body.innerHTML;
 
-hb=cont.match(/<pre>  HEMOGLOBINA\.\.\.\.\: <b>.*? g\/dL\<\/b>/);
-if(hb!=null){hb.toString().replace(/<pre>  HEMOGLOBINA\.\.\.\.\: <b>/gi,'').replace(/g\/dL</b>/gi,'')}else{hb='nulo'};
+hb=cont.match(/<pre>  HEMOGLOBINA\.\.\.\.\: <b>.*? g\/dL\<\/b>/)[0];
+if(hb!=null){hb.toString().replace(/<pre>  HEMOGLOBINA\.\.\.\.\: <b>/gi,'').replace(/g\/dL<\/b>/gi,'')}else{hb='nulo'};
 
 leuco=cont.match(/<pre>  LEUCÓCITOS\.\.\.\.\.\: <b>.*? \/mm³<\/b>/);
 if(leuco!=null){leuco.toString().replace(/<pre>  LEUCÓCITOS\.\.\.\.\.\: <b>/gi,'').replace(/ \/mm³<\/b>/gi,'')}else{leuco='nulo'};
