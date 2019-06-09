@@ -101,14 +101,19 @@ urina_hemacias=cont.match(/HEMÁCIAS \.\.\.\.\.\.\.\.\.\.: <b>.*?<\/b>&nbsp;\/ml
 }else{
 urina_hemacias='não disponível';
 }
-if(cont.match(/NITRITO\.\.\.\.\.\.\.\.\.\.\.\.: <b>.*?<\/b><\/td>/){  
+if(cont.match(/NITRITO\.\.\.\.\.\.\.\.\.\.\.\.: <b>.*?<\/b><\/td>/)){  
 urina_nitrito=cont.match(/NITRITO\.\.\.\.\.\.\.\.\.\.\.\.: <b>.*?<\/b><\/td>/).toString().replace(/<\/b><\/td>/gi,'').replace(/NITRITO\.\.\.\.\.\.\.\.\.\.\.\.: <b>/gi,'');
 }else{
 urina_nitrito='não disponível';  
 }
-  
+
+if(cont.match(/SANGUE OCULTO \.\.\.\.\.: <b>.*?<\/b><\/td>/) ){
 urina_sangue=cont.match(/SANGUE OCULTO \.\.\.\.\.: <b>.*?<\/b><\/td>/).toString().replace(/<\/b><\/td>/gi,'').replace(/SANGUE OCULTO \.\.\.\.\.: <b>/gi,'');
-urina='Leuco (urina): '+urina_leuco+' | Hemacias (urina): '+urina_hemacias+' | Nitrito: '+ urina_nitrito+ ' | Sangue oculto (urina): ' + urina_sangue;
+}else{urina_sangue='não disponível'; }
+  
+  urina='Leuco (urina): '+urina_leuco+' | Hemacias (urina): '+urina_hemacias+' | Nitrito: '+ urina_nitrito+ ' | Sangue oculto (urina): ' + urina_sangue;
+
+
 }else{
 urina='nulo'  
 }
@@ -127,4 +132,4 @@ msg+=b[i]+': '+a[i]+' / ';
 }
 
 
-document.body.innerHTML='<br><br> <b><h1>LabsHU 1.0</h1></b> - por Alexandre Kirchner R2CG (sugestões: alexandrekirpa@gmail.com)<br><br>'+msg+ '<br><br><br>'+document.body.innerHTML;
+document.body.innerHTML='<div style="font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif; "><br><br> <b><h1>LabsHU 1.0</h1></b> - por Alexandre Kirchner R2CG (sugestões: alexandrekirpa@gmail.com)<br><br>'+msg+ '<br><br><br></div>'+document.body.innerHTML;
