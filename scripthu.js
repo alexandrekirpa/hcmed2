@@ -89,7 +89,7 @@ lactato=cont.match(/<pre>LACTATO\.\.\.\.\.\.\.\.\.\.\.\.: <b>.*?&nbsp;mg\/dL<\/b
 if(lactato!=null){lactato=lactato.toString().replace(/<pre>LACTATO\.\.\.\.\.\.\.\.\.\.\.\.: <b>/gi,'').replace(/&nbsp;mg\/dL<\/b><\/pre>/gi,'')}else{lactato='nulo'};
 
 
-if(cont.match(/URINA TIPO 1/gi)){
+if(cont.match(/URINA TIPO I/)){
 var urina;
 if(cont.match(/LEUCÓCITOS \.\.\.\.\.\.\.\.: <b>.*?<\/b>&nbsp;\/ml<\/td>/)){
 urina_leuco=cont.match(/LEUCÓCITOS \.\.\.\.\.\.\.\.: <b>.*?<\/b>&nbsp;\/ml<\/td>/).toString().replace(/<\/b>&nbsp;\/ml<\/td>/gi,'').replace(/LEUCÓCITOS \.\.\.\.\.\.\.\.: <b>/gi,'');
