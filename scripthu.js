@@ -139,4 +139,4 @@ msg+=b[i]+': '+a[i]+' / ';
 }
 
 
-document.body.innerHTML='<div style=\"font-family: Calibri, Candara, Segoe, segoe UI, Optima, Arial, sans-serif;\"><br><br> <b><h1>LabsHU 1.0</h1></b><h6>por Alexandre Kirchner R2CG (sugestões: alexandrekirpa@gmail.com)</h6><br><br>'+msg+ '<br><br><br></div>'+document.body.innerHTML;
+document.body.innerHTML='<div style=\"font-family: Calibri, Candara, Segoe, segoe UI, Optima, Arial, sans-serif;\"><br><br> <b><h1>LabsHU 1.0</h1></b><h6>por Alexandre Kirchner R2CG (sugestões: alexandrekirpa@gmail.com)</h6><br><br>'+msg.slice(0,msg.length-2)+ '<br><br><br></div>'+document.body.innerHTML;
