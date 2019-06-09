@@ -4,6 +4,13 @@ javascript:
 
 cont=document.body.innerHTML;
 
+
+r=cont.match(/>R\.\.\.\.\.\.\.\.\.\.\.: <b>.*?&nbsp;/);
+if(r!=null){r=r.toString().replace(/>R\.\.\.\.\.\.\.\.\.\.\.: <b>/gi,'').replace(/&nbsp;/,'')}else{r='nulo'};
+
+inr=cont.match(/INR\.\.\.\.\.\.\.\.\.: <b>.*?<\/b>&nbsp;<br>/);
+if(inr!=null){inr=inr.toString().replace(/INR\.\.\.\.\.\.\.\.\.: <b>/gi,'').replace(/<\/b>&nbsp;<br>/gi,'')}else{inr='nulo'};
+
 hb=cont.match(/<pre>  HEMOGLOBINA\.\.\.\.\: <b>.*? g\/dL\<\/b>/);
 if(hb!=null){hb=hb.toString().replace(/<pre>  HEMOGLOBINA\.\.\.\.\: <b>/gi,'').replace(/g\/dL<\/b>/gi,'')}else{hb='nulo'};
 
@@ -121,8 +128,8 @@ urina='nulo'
 
 
 
-a=[hb,leuco,plq,pcr,ur,cr,na,k,ddimero,ckmb,troponina,bt,bd,bi,tgo,tgp,ggt,fa,amilase,lipase,ph,po2,hco3,pco2,be,sato2,cai,lactato,urina];
-b=['Hb','Leuco','Plaquetas','PCR','Ur','Cr','Na','K','DDIMERO','CKMB','TROPONINA','BT','BD','BI','TGO','TGP','GGT','FA','AMILASE','LIPASE','pH','pO2','HCO3','pCO2','BE','SatO2','CAi','Lactato','Urina1'];
+a=[hb,leuco,plq,pcr,ur,cr,na,k,ddimero,ckmb,troponina,bt,bd,bi,tgo,tgp,ggt,fa,amilase,lipase,ph,po2,hco3,pco2,be,sato2,cai,lactato,inr,r,urina];
+b=['Hb','Leuco','Plaquetas','PCR','Ur','Cr','Na','K','DDIMERO','CKMB','TROPONINA','BT','BD','BI','TGO','TGP','GGT','FA','AMILASE','LIPASE','pH','pO2','HCO3','pCO2','BE','SatO2','CAi','Lactato','INR','TTPA-R','Urina1'];
 msg='Exames --->';
 
 for(i=0;i<a.length;i++){
