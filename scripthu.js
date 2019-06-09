@@ -93,7 +93,7 @@ if(cont.match(/URINA TIPO I/)){
 var urina;
 if(cont.match(/LEUCÓCITOS \.\.\.\.\.\.\.\.: <b>.*?<\/b>&nbsp;\/ml<\/td>/)){
 urina_leuco=cont.match(/LEUCÓCITOS \.\.\.\.\.\.\.\.: <b>.*?<\/b>&nbsp;\/ml<\/td>/).toString().replace(/<\/b>&nbsp;\/ml<\/td>/gi,'').replace(/LEUCÓCITOS \.\.\.\.\.\.\.\.: <b>/gi,'');
-else{
+}else{
 urina_leuco='não disponível';
 }
 if(cont.match(/HEMÁCIAS \.\.\.\.\.\.\.\.\.\.: <b>.*?<\/b>&nbsp;\/ml<\/td>/)){
