@@ -88,16 +88,31 @@ if(cai!=null){cai=cai.toString().replace(/CÁLCIO IONIZADO - SANGUE\.\.\.\.\.\.\
 lactato=cont.match(/<pre>LACTATO\.\.\.\.\.\.\.\.\.\.\.\.: <b>.*?&nbsp;mg\/dL<\/b><\/pre>/);
 if(lactato!=null){lactato=lactato.toString().replace(/<pre>LACTATO\.\.\.\.\.\.\.\.\.\.\.\.: <b>/gi,'').replace(/&nbsp;mg\/dL<\/b><\/pre>/gi,'')}else{lactato='nulo'};
 
+
+if(cont.match(/URINA TIPO 1/gi)){
 var urina;
+if(cont.match(/LEUCÓCITOS \.\.\.\.\.\.\.\.: <b>.*?<\/b>&nbsp;\/ml<\/td>/)){
 urina_leuco=cont.match(/LEUCÓCITOS \.\.\.\.\.\.\.\.: <b>.*?<\/b>&nbsp;\/ml<\/td>/).toString().replace(/<\/b>&nbsp;\/ml<\/td>/gi,'').replace(/LEUCÓCITOS \.\.\.\.\.\.\.\.: <b>/gi,'');
+else{
+urina_leuco='não disponível';
+}
+if(cont.match(/HEMÁCIAS \.\.\.\.\.\.\.\.\.\.: <b>.*?<\/b>&nbsp;\/ml<\/td>/)){
 urina_hemacias=cont.match(/HEMÁCIAS \.\.\.\.\.\.\.\.\.\.: <b>.*?<\/b>&nbsp;\/ml<\/td>/).toString().replace(/<\/b>&nbsp;\/ml<\/td>/gi,'').replace(/HEMÁCIAS \.\.\.\.\.\.\.\.\.\.: <b>/gi,'');
+}else{
+urina_hemacias='não disponível';
+}
+if(cont.match(/NITRITO\.\.\.\.\.\.\.\.\.\.\.\.: <b>.*?<\/b><\/td>/){  
 urina_nitrito=cont.match(/NITRITO\.\.\.\.\.\.\.\.\.\.\.\.: <b>.*?<\/b><\/td>/).toString().replace(/<\/b><\/td>/gi,'').replace(/NITRITO\.\.\.\.\.\.\.\.\.\.\.\.: <b>/gi,'');
+}else{
+urina_nitrito='não disponível';  
+}
+  
 urina_sangue=cont.match(/SANGUE OCULTO \.\.\.\.\.: <b>.*?<\/b><\/td>/).toString().replace(/<\/b><\/td>/gi,'').replace(/SANGUE OCULTO \.\.\.\.\.: <b>/gi,'');
-
-if(urina!=null){
 urina='Leuco (urina): '+urina_leuco+' | Hemacias (urina): '+urina_hemacias+' | Nitrito: '+ urina_nitrito+ ' | Sangue oculto (urina): ' + urina_sangue;
+}else{
+urina='nulo'  
+}
 
-}else{urina='nulo'};
 
 
 
