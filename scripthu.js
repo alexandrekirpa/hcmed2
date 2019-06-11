@@ -51,7 +51,7 @@ bd=cont.match(/<pre>BILIRRUBINA DIRETA\.\.\.\.\.\.\.\.\.\.:<b>.*?&nbsp;mg\/dL<\/
 if(bd!=null){bd=bd.toString().replace(/<pre>BILIRRUBINA DIRETA\.\.\.\.\.\.\.\.\.\.:<b>/gi,'').replace(/&nbsp;mg\/dL<\/b><\/pre>/gi,'')}else{bd='nulo'};
 
 bi=cont.match(/<pre>BILIRRUBINA INDIRETA\.\.\.\.\.\.\.\.: <b>.*?&nbsp;mg\/dL<\/b><\/pre>/);
-if(bi!=null){bt=bt.toString().replace(/<pre>BILIRRUBINA INDIRETA\.\.\.\.\.\.\.\.: <b>/gi,'').replace(/&nbsp;mg\/dL<\/b><\/pre>/gi,'')}else{bi='nulo'};
+if(bi!=null){bi=bi.toString().replace(/<pre>BILIRRUBINA INDIRETA\.\.\.\.\.\.\.\.: <b>/gi,'').replace(/&nbsp;mg\/dL<\/b><\/pre>/gi,'')}else{bi='nulo'};
 
 tgo=cont.match(/<pre>ASPARTATO TRANSAMINASE (TGO\/AST)\.\.\.\.: <b>.*?&nbsp;U\/L<\/b><\/pre>/);
 if(tgo!=null){tgo=tgo.toString().replace(/<pre>ASPARTATO TRANSAMINASE (TGO\/AST)\.\.\.\.: <b>/gi,'').replace(/&nbsp;U\/L<\/b><\/pre>/gi,'')}else{tgo='nulo'};
