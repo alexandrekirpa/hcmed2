@@ -7,9 +7,20 @@ javascript: function dat(){
 
 document.getElementById('PESO_PACIENTE').setAttribute('value','70'); document.getElementById('DESCRICAO_CID10').setAttribute('value','ANEMIA AGUDA POS-HEMORRAGICA'); document.getElementById('CID10').setAttribute('value','D62'); document.getElementById('JUSTIFICATIVA_DIAGNOSTICO').setAttribute('value','Z513 - TRANSFUSAO DE SANGUE, SEM DIAGNOSTICO REGISTRADO'); document.getElementById('IGNORADO_TRANSFUSAO_PREVIA').click(); document.getElementById('IGNORADO_REACAO_TRANSFUSIONAL').click(); document.getElementById('div_DATA_PROGRAMADA').setAttribute('style','display:block'); document.getElementById('div_DATA_CIRURGIA').setAttribute('style','display:block'); document.getElementById('PROGRAMADA').click(); document.getElementById('CKB_CIRURGIA').click(); document.getElementById('DATA_PROGRAMADA').value=dat(); document.getElementById('DATA_CIRURGIA').value=dat(); document.getElementById("ID_ORIGEMREQUISICAO").selectedIndex=14; cs=prompt('Digite: \n 1 para Concentrado de Hemacias \n2 para plaquetas \n3 para plasma fresco congelado'); 
 
+
+function selectin(sel,strnm){
+  dd=document.getElementById(sel);
+  (for o=0,o<sel.length,o++){
+  if(o.getElementByTagName('option')[0].value==strnm){
+   cc=o.getElementByTagName('option')[0].index;
+  }
+    
+  }
+  return cc;
+}
+
 if(cs=='1'){
-document.getElementById("cmb_procedimento").selectedIndex=
-document.getElementById("cmb_procedimento").querySelectorAll("option[value=Concentrado de Hemácias]")[0].index;
+document.getElementById("cmb_procedimento").selectedIndex=selectin("cmb_procedimento","Concentrado de Hemácias")
 var event = new Event('change');
 document.getElementById("cmb_procedimento").dispatchEvent(event); 
 document.getElementById("Hemacia_13__Selecionado").click();
