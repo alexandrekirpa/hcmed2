@@ -11,8 +11,8 @@ document.getElementById('PESO_PACIENTE').setAttribute('value','70'); document.ge
 function selectin(sel,strnm){
   dd=document.getElementById(sel);
   (for o=0;o<sel.length;o++){
-  if(o.getElementByTagName('option')[0].value==strnm){
-   cc=o.getElementByTagName('option')[0].index;
+  if(o.getElementsByTagName('option')[0].value==strnm){
+   cc=o.getElementsByTagName('option')[0].index;
   }
     
   }
