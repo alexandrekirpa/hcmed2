@@ -33,7 +33,7 @@ document.getElementById("cmbQuantidade").selectedIndex=10;
 else if(cs=='2'){
 
  document.getElementById("cmb_procedimento").selectedIndex=25;v
- ar event = new Event('change');
+ var event = new Event('change');
  document.getElementById("cmb_procedimento").dispatchEvent(event); 
  document.getElementById("Plaqueta_10__Selecionado").click(); 
  document.getElementById("Plaqueta_7__Selecionado").click(); 
